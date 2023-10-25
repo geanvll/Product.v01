@@ -24,6 +24,12 @@ public class Program {
 		
 		Product product = new Product(name, price, quantity);
 		
+		product.setName("Notebook");
+		System.out.println("Dados atualizados: " + product.getName());
+		
+		product.setPrice(4200.00);
+		System.out.println("Dados atualizados: " + product.getPrice());
+		
 		System.out.println();
 		System.out.println("Dados do produto: " + product);
 		
