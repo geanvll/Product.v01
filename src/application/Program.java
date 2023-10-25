@@ -14,21 +14,22 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner t = new Scanner(System.in);
 		
-		Product product = new Product();
 		System.out.println("Entre com os dados do produto: ");
 		System.out.print("Nome: ");
-		product.name = t.nextLine();
+		String name = t.nextLine();
 		System.out.print("Preço: ");
-		product.price = t.nextDouble();
+		double price = t.nextDouble();
 		System.out.print("Quantidade em estoque: ");
-		product.quantity = t.nextInt();
+		int quantity = t.nextInt();
+		
+		Product product = new Product(name, price, quantity);
 		
 		System.out.println();
 		System.out.println("Dados do produto: " + product);
 		
 		System.out.println();
 		System.out.print("Entre com o número de produtos adicionados ao estoque: ");
-		int quantity = t.nextInt();
+		quantity = t.nextInt();
 		product.addProduct(quantity);
 		
 		System.out.println();
